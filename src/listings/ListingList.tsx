@@ -70,7 +70,13 @@ const sampleListings = [
 
 export default function ListingList() {
 	return (
-		<div className='ListingList flex flex-wrap max-w-md flex-row min-w-full justify-evenly gap-10'>
+		<div
+			className={`
+                ListingList
+                flex flex-wrap flex-row
+                justify-evenly
+                gap-10
+            `}>
 			{sampleListings.map((l, i) => (
 				<ListingCard
 					listing={l}
