@@ -1,0 +1,60 @@
+digraph sharebnb {
+    bgcolor="#333333";
+    rankdir=LR;
+    node [shape=box, color="#FFFFFF", fontcolor="#FFFFFF", fillcolor="#444444", style=filled];
+    edge [color="#FFFFFF" fontcolor="#FFFFFF"];
+
+    app[label="_app.tsx\n(Custom App component)"];
+
+    index[label="page.tsx\n(ListingsPage)"];
+    login[label="login.tsx\n(LoginPage)"];
+    register[label="register.tsx\n(RegisterPage)"];
+    profile[label="profile.tsx\n(UserProfilePage)"];
+    id[label="[id].tsx\n(Individual Listings)"];
+    booking[label="booking.tsx\n(BookingPage)"];
+    messages[label="messages.tsx\n(MessagesPage)"];
+
+    app -> index;
+    app -> login;
+    app -> register;
+    app -> profile;
+    app -> id;
+    app -> booking;
+    app -> messages;
+
+    searchBar[label="searchBar"];
+    index -> searchBar;
+    searchBar -> LocationFilter[label="LocationFilter.tsx"];
+    searchBar -> DateFilter[label="DateFilter.tsx"];
+    searchBar -> GuestFilter[label="GuestFilter.tsx"];
+
+    listingList[label="ListingList"];
+    index -> listingList[label="ListingList.tsx"];
+    listingList -> ListingItem[label="ListingItem.tsx"];
+
+    user[label="user"];
+    profile -> user;
+    user -> UserInfo[label="UserInfo.tsx"];
+    user -> UserListings[label="UserListings.tsx"];
+    user -> UserBookings[label="UserBookings.tsx"];
+
+    listing[label="listing"];
+    id -> listing;
+    listing -> ListingInfo[label="ListingInfo.tsx"];
+    listing -> Reviews[label="Reviews.tsx"];
+    listing -> HostInfo[label="HostInfo.tsx"];
+
+    // forms[label="forms"];
+    login -> LoginForm[label="LoginForm.tsx"];
+    register -> RegisterForm[label="RegisterForm.tsx"];
+    booking -> BookingForm[label="BookingForm.tsx"];
+
+    payment[label="payment"];
+    booking -> payment;
+    payment -> PaymentInfo[label="PaymentInfo.tsx"];
+
+    messagesComponents[label="messages"];
+    messages -> messagesComponents;
+    messagesComponents -> MessageList[label="MessageList.tsx"];
+    messagesComponents -> MessageItem[label="MessageItem.tsx"];
+}
