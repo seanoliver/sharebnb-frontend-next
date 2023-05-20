@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sharebnb
 
-## Getting Started
+A place to find and share amazing outdoor spaces.
 
-First, run the development server:
+## Setup
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## TODO
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [ ] Add script to generate listing & user data to populate DB
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Component Tree
 
-## Learn More
+![Component Diagram](component-diagram.svg)
 
-To learn more about Next.js, take a look at the following resources:
+## File Tree
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+.
+├── app
+│   ├── index.tsx              // Corresponds to ListingsPage
+│   ├── login.tsx              // Corresponds to LoginPage
+│   ├── register.tsx           // Corresponds to RegisterPage
+│   ├── profile.tsx            // Corresponds to UserProfilePage
+│   ├── [id].tsx               // Dynamic route for individual listings
+│   ├── booking.tsx            // Corresponds to BookingPage
+│   └── messages.tsx           // Corresponds to MessagesPage
+├── components
+│   ├── searchBar
+│   │   ├── index.tsx
+│   │   ├── LocationFilter.tsx
+│   │   ├── DateFilter.tsx
+│   │   └── GuestFilter.tsx
+│   ├── user
+│   │   ├── UserInfo.tsx
+│   │   ├── UserListings.tsx
+│   │   └── UserBookings.tsx
+│   ├── listing
+│   │   ├── ListingInfo.tsx
+│   │   ├── Reviews.tsx
+│   │   └── HostInfo.tsx
+│   ├── listings
+│   │   ├── ListingList.tsx
+│   │   └── ListingItem.tsx
+│   ├── forms
+│   │   ├── LoginForm.tsx
+│   │   ├── RegisterForm.tsx
+│   │   └── BookingForm.tsx
+│   ├── payment
+│   │   └── PaymentInfo.tsx
+│   ├── messages
+│   │   ├── MessageList.tsx
+│   │   └── MessageItem.tsx
+│   └── common
+│       └── BookButton.tsx
+├── lib
+│   └── api.tsx                // API functions
+├── styles
+│   ├── globals.css            // Global styles
+│   └── theme.tsx              // Theme-related styles
+└── public
+    ├── images                // Images used in the app
+    └── favicon.ico           // Favicon
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.tsx/tree/canary/packages/create-next-app).
