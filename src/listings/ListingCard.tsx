@@ -4,11 +4,14 @@ export default function ListingCard({ listing }) {
 	return (
 		<div
 			className={`
-			group relative
-			bg-slate-200 dark:bg-slate-700
-			rounded-md
-			md:p-5 sm:p-1
-			max-w-md`}>
+				group relative
+				bg-slate-200 dark:bg-slate-700
+				rounded-md
+				md:p-5 sm:p-1
+				max-w-sm
+				shadow-md
+				hover:shadow-xl
+			`}>
 			<div
 				className={`
 					min-h-80
