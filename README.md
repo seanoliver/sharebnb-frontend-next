@@ -13,10 +13,36 @@ npm run dev
 ## TODO
 
 - [ ] Add script to generate listing & user data to populate DB
+- [ ] Message notifications page
 
 ## Component Tree
 
-![Component Diagram](component-diagram.svg)
+```mermaid
+flowchart LR
+
+    app -->|index.tsx|ListingsPage
+    app --> AuthPage --> LoginForm & RegisterForm
+    app --> ProfilePage
+    app -->|"[id].tsx"|ListingPage
+    app --> SearchBar
+
+    SearchBar -->|LocationFilter.tsx|LocationFilter
+    SearchBar --> DateFilter
+    SearchBar --> GuestFilter
+
+
+    ListingsPage --> ListingList --> ListingCard --> ListingPage
+
+    ListingPage --> ListingInfo
+    ListingPage --> Reviews
+    ListingPage --> HostInfo
+
+    ProfilePage --> UserInfo
+    ProfilePage --> UserListings
+    ProfilePage --> UserBookings
+
+
+```
 
 ## File Tree
 
@@ -31,7 +57,7 @@ npm run dev
 │   ├── booking.tsx            // Corresponds to BookingPage
 │   └── messages.tsx           // Corresponds to MessagesPage
 ├── components
-│   ├── searchBar
+│   ├── SearchBar
 │   │   ├── index.tsx
 │   │   ├── LocationFilter.tsx
 │   │   ├── DateFilter.tsx
