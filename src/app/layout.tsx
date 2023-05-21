@@ -17,13 +17,14 @@ export default function RootLayout({
 		<html lang='en'>
 			<body
 				className={`
-          ${inter.className}
+					${inter.className}
 					text-slate-500
 					bg-gradient-to-b from-slate-200 to-white
 					dark:text-slate-400
 					dark:from-slate-900
 					dark:to-slate-800
 					flex align-middle flex-col justify-center
+					h-full
 				`}>
 				<div className='container mx-auto'>{children}</div>
 			</body>
