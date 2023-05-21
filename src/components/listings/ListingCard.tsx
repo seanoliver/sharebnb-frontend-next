@@ -1,6 +1,19 @@
 import Image from 'next/image';
 
-export default function ListingCard({ listing }) {
+type ListingDetail = {
+	id: number;
+	hostId: number;
+	title: string;
+	description: string;
+	location: string;
+	pricePerNight: number;
+	maxGuests: number;
+	imageUrl: string;
+	createdAt: Date;
+	updatedAt: Date;
+};
+
+export default function ListingCard({ listing }: { listing: ListingDetail }) {
 	return (
 		<div
 			className={`
@@ -8,7 +21,7 @@ export default function ListingCard({ listing }) {
 				bg-slate-200 dark:bg-slate-700
 				rounded-md
 				md:p-5 sm:p-1
-				max-w-sm
+				max-w-xs
 				shadow-md
 				hover:shadow-xl
 			`}>
