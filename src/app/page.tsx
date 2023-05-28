@@ -1,7 +1,7 @@
 'use client';
 
 import Navigation from '@/components/nav';
-import ListingList from '../components/listings/ListingList';
+import ListingList from './listings/ListingList';
 import SearchBar from '../components/searchBar';
 
 function classNames(...classes) {
@@ -14,7 +14,7 @@ export default function Home() {
 			<div className='Home min-h-full'>
 				<Navigation />
 				<header className='bg-slate-100 shadow'>
-					<div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
+					<div className='mx-auto flex justify-center max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
 						<SearchBar />
 					</div>
 				</header>

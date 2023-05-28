@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ListingDetail } from '@/lib/types';
 
+
 export default function ListingCard({ listing }: { listing: ListingDetail }) {
 	const listingUrl =
 		process.env.NEXT_PUBLIC_S3_PROTOCOL +
