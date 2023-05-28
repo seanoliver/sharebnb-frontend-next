@@ -1,14 +1,15 @@
 export type ListingDetail = {
-	id: number;
-	hostId: number;
-	title: string;
+	listingid: number;
+	name: string;
 	description: string;
-	location: string;
-	pricePerNight: number;
-	maxGuests: number;
-	imageUrl: string;
-	createdAt: Date;
-	updatedAt: Date;
+	price: number;
+	street: string;
+	city: string;
+	state: string;
+	zip: string;
+	genre: string;
+	ownerId: number;
+	photourl: string;
 };
 
 export type UserBasic = {
