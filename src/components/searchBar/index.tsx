@@ -10,7 +10,7 @@ type formData = {
 export default function SearchBar() {
 	const [formData, setFormData] = useState<formData>({
 		location: '',
-		guests: null,
+		guests: '',
 		checkIn: '',
 		checkOut: '',
 	});
